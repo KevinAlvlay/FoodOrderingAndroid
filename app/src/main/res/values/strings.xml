@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">FoodOrderingAndroid</string>
+    <string name="app_name">点餐系统</string>
+    <string name="start_1">亲爱的顾客您好</string>
+    <string name="start_2">欢迎进入点单系统</string>
+    <string name="start_3">==点击此处开始点单==</string>
+    <string name="start_4">APP开发者：詹天成，秦帅，董志浩</string>
+
 </resources>
