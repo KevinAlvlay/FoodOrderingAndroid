@@ -4,5 +4,7 @@
     <string name="start_2">欢迎进入点单系统</string>
     <string name="start_3">==点击此处开始点单==</string>
     <string name="start_4">APP开发者：詹天成，秦帅，董志浩</string>
+    <string name="start_5">开发人员信息</string>
+    <string name="start_6">暂存测试信息</string>
 
 </resources>

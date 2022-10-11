@@ -1,5 +1,7 @@
 package com.example.foodorderingandroid;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +24,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
 
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.Test_Info:
+                Toast.makeText(this,"This is a test.",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.Developer_Info:
+                Toast.makeText(this,"APP开发者：詹天成，秦帅，董志浩",Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+        return true;
     }
 }
