@@ -1,5 +1,6 @@
 package com.example.foodorderingandroid;
 
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"正在加载菜单……",Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this,OrderActivity.class);
+                startActivity(intent);
             }
         });
 

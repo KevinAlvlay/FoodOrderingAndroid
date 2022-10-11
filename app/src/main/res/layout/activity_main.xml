@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    <!--APP开发者-->
+    <!--APP开发者，现在已经更改到menu中显示-->
     <!--TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
