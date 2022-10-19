@@ -1,4 +1,4 @@
-package com.example.foodorderingandroid;
+package com.example.foodorderingandroid.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.foodorderingandroid.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"正在加载菜单……",Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(MainActivity.this,OrderActivity.class);
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
                 startActivity(intent);
+                System.exit(1);
             }
         });
 
