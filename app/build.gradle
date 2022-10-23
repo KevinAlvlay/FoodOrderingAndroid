@@ -28,10 +28,15 @@ android {
     packagingOptions {
         pickFirst "META-INF/library_release.kotlin_module"
     }
-    packagingOptions
-            {
-                exclude'META-INF/DEPENDENCIES'
-            }
+    packagingOptions {
+        exclude'META-INF/DEPENDENCIES'
+    }
+    // 自定义打包名称
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "快乐点餐.apk"
+//        }
+//    }
 }
 
 dependencies {

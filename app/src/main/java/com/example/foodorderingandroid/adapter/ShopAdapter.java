@@ -19,7 +19,8 @@ import java.util.List;
 public class ShopAdapter extends BaseAdapter {
     private Context mContext;
     private List<ShopBean> sbl;
-    private int[] bgs = {R.drawable.shop_1, R.drawable.shop_2, R.drawable.shop_3, R.drawable.shop_4, R.drawable.shop_5};
+    private int[] bgs = {R.drawable.shop_1, R.drawable.shop_2, R.drawable.shop_3, R.drawable.shop_4,
+            R.drawable.shop_5, R.drawable.shop_6};
     public ShopAdapter(Context context) {
         this.mContext = context;
     }

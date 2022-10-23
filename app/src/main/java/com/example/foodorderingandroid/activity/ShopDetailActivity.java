@@ -137,7 +137,7 @@ public class ShopDetailActivity extends AppCompatActivity implements View.
                 minusCarData(bean, position);//删除购物车中的菜品
             }
         });
-        adapter = new MenuAdapter(this, new MenuAdapter.OnSelectListener() {
+        adapter = new MenuAdapter(ShopDetailActivity.this, new MenuAdapter.OnSelectListener() {
             @Override
             public void onSelectAddCar(int position) {
                 //点击加入购物车按钮将菜添加到购物车中
@@ -156,6 +156,7 @@ public class ShopDetailActivity extends AppCompatActivity implements View.
                 carDataMsg();
             }
         });
+        adapter.setShopId(bean.getId());
         lv_list.setAdapter(adapter);
     }
     @Override
@@ -171,6 +172,7 @@ public class ShopDetailActivity extends AppCompatActivity implements View.
                     intent.putExtra("carFoodList", (Serializable) carFoodList);
                     intent.putExtra("totalMoney", totalMoney + "");
                     intent.putExtra("distributionCost", bean.getDistributionCost() + "");
+                    intent.putExtra("shopId", bean.getId());
 //                    System.out.println("12345");// debug
                     startActivity(intent);
                 }
@@ -332,5 +334,8 @@ public class ShopDetailActivity extends AppCompatActivity implements View.
         tv_not_enough.setText("￥" + bean.getOfferPrice() + "起送"); //设置起送价格
         //设置店铺图片
         adapter.setData(bean.getFoodList());//将菜单列表数据传递到adapter中
+    }
+    public int getBeanId(){
+        return bean.getId();
     }
 }

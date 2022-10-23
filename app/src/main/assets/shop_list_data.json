@@ -81,39 +81,39 @@
 	},
 	{
 		"id":3,
-		"shopName":"必胜客",
-		"saleNum":10,
-		"offerPrice":15,
+		"shopName":"饮品店",
+		"saleNum":1260,
+		"offerPrice":30,
 		"distributionCost":5,
-		"welfare":"下单即可获得一个￥5优惠券",
-		"time":"配送约20分钟",
+		"welfare":"新品上市，购买新品即可获得小礼物一份！",
+		"time":"配送约0.5-1小时",
 		"shopPic":"",
-		"shopNotice":"公告：狂欢尽兴 必胜有礼 5折开抢。",
+		"shopNotice":"公告：下单后0.5-1小时送达！请耐心等候",
 		"foodList":[
 			{
 				"foodId":"1",
-				"foodName":"3份单人工作日特惠餐",
-				"taste":"披萨、沙拉、柠檬红茶",
-				"saleNum":"50",
-				"price":99,
+				"foodName":"柠檬红茶",
+				"taste":"大片柠檬，现煮原叶鲜红茶",
+				"saleNum":"200",
+				"price":10,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"2",
-				"foodName":"拼盘+嗨杯鲜果茶",
-				"taste":"薯条、鸡翅、鸡米花",
-				"saleNum":"140",
-				"price":49,
+				"foodName":"港式杨枝甘露",
+				"taste":"香芒果，西米，椰果",
+				"saleNum":"150",
+				"price":15,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"3",
-				"foodName":"德克萨斯牛排2份",
-				"taste":"牛肉、柠檬茶",
-				"saleNum":"141",
-				"price":57,
+				"foodName":"百香果",
+				"taste":"百香果，珍珠，椰果",
+				"saleNum":"300",
+				"price":13,
 				"count":0,
 				"foodPic":""
 			}
@@ -121,82 +121,125 @@
 	},
 	{
 		"id":4,
-		"shopName":"艾尚夜宵",
-		"saleNum":496,
-		"offerPrice":20,
-		"distributionCost":13,
-		"welfare":"下单即可获得一个￥15优惠券",
-		"time":"配送约42分钟",
+		"shopName":"快乐炸鸡",
+		"saleNum":783,
+		"offerPrice":30,
+		"distributionCost":7,
+		"welfare":"本店周年庆，充值500元送40元",
+		"time":"配送约30分钟",
 		"shopPic":"",
-		"shopNotice":"公告：本店赠送爱心早餐。",
+		"shopNotice":"公告：会员充值活动又来啦，不容错过！",
 		"foodList":[
 			{
 				"foodId":"1",
-				"foodName":"烤牛肉炒饭",
-				"taste":"原味、牛肉、玉米、豌豆、胡萝卜",
-				"saleNum":"102",
-				"price":18.8,
+				"foodName":"无骨炸鸡套餐",
+				"taste":"无骨炸鸡，黑椒鸡块，锅巴红薯，年糕，可乐",
+				"saleNum":"329",
+				"price":30,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"2",
-				"foodName":"嫩豆腐汤+米饭",
-				"taste":"香辣、豆腐花、鸡蛋",
-				"saleNum":"66",
-				"price":14.5,
+				"foodName":"小吃自选套餐",
+				"taste":"秘制香辣鸡腿堡，薯条，中式鸡腿",
+				"saleNum":"240",
+				"price":20,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"3",
-				"foodName":"超辣-酸辣土豆丝",
-				"taste":"酸辣、土豆、青尖椒",
-				"saleNum":"59",
-				"price":14,
+				"foodName":"缤纷全鸡桶",
+				"taste":"香辣鸡翅，果木香鸡腿",
+				"saleNum":"422",
+				"price":36,
 				"count":0,
 				"foodPic":""
 			}
+
 		]
 	},
 	{
 		"id":5,
-		"shopName":"上岛咖啡",
-		"saleNum":300,
-		"offerPrice":30,
+		"shopName":"餐饮店",
+		"saleNum":731,
+		"offerPrice":80,
 		"distributionCost":10,
-		"welfare":"下单即可获得一个￥30优惠券",
-		"time":"配送约30分钟",
+		"welfare":"本店新推出特色菜，欢迎平常",
+		"time":"配送约1-1.5分钟",
 		"shopPic":"",
-		"shopNotice":"公告：本店牛排买一送一。",
+		"shopNotice":"公告：欢迎光临本店，很高兴为您服务！",
 		"foodList":[
 			{
 				"foodId":"1",
-				"foodName":"特惠双人餐",
-				"taste":"牛排、沙拉、浓汤",
-				"saleNum":"102",
-				"price":109,
+				"foodName":"酱香大骨汤冷面",
+				"taste":"酱大骨，手擀面条",
+				"saleNum":"525",
+				"price":30,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"2",
-				"foodName":"超值双人餐",
-				"taste":"牛排、法包、蔬菜沙拉",
-				"saleNum":"100",
-				"price":139,
+				"foodName":"纯肉肠风味卷饼",
+				"taste":"五花肉，新摊薄饼",
+				"saleNum":"432",
+				"price":20,
 				"count":0,
 				"foodPic":""
 			},
 			{
 				"foodId":"3",
-				"foodName":"双人饮品",
-				"taste":"茉莉白龙王、卡布奇诺",
-				"saleNum":"70",
-				"price":69,
+				"foodName":"网红酸奶麻花",
+				"taste":"纯味酸奶，现炸麻花",
+				"saleNum":"632",
+				"price":18,
 				"count":0,
 				"foodPic":""
 			}
+
+		]
+	},
+	{
+		"id":6,
+		"shopName":"米线坊",
+		"saleNum":821,
+		"offerPrice":50,
+		"distributionCost":8,
+		"welfare":"正值反馈季，消费满20免费加鹌鹑蛋一个",
+		"time":"配送约30分钟",
+		"shopPic":"",
+		"shopNotice":"公告：欢迎光临本店，很高兴为您服务！",
+		"foodList":[
+			{
+				"foodId":"1",
+				"foodName":"酸菜牛肉米线",
+				"taste":"微辣，中辣，麻辣",
+				"saleNum":"389",
+				"price":25,
+				"count":0,
+				"foodPic":""
+			},
+			{
+				"foodId":"2",
+				"foodName":"芽菜肉沫干板米线",
+				"taste":"微辣，中辣，麻辣",
+				"saleNum":"261",
+				"price":24,
+				"count":0,
+				"foodPic":""
+			},
+			{
+				"foodId":"3",
+				"foodName":"红烧牛肉米线",
+				"taste":"微辣，中辣，麻辣",
+				"saleNum":"325",
+				"price":28,
+				"count":0,
+				"foodPic":""
+			}
+
 		]
 	}
 ]

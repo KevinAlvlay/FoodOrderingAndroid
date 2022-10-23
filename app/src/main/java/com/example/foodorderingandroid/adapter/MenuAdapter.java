@@ -19,8 +19,17 @@ import java.util.List;
 
 public class MenuAdapter extends BaseAdapter {
     private Context mContext;
-    private List<FoodBean> fbl;                   //菜单列表数据
+    public int shopId;
+    private List<FoodBean> fbl;//菜单列表数据
     private OnSelectListener onSelectListener; //加入购物车按钮的监听事件
+
+    private int[][] bgs = {{R.drawable.food1_1, R.drawable.food1_2,R.drawable.food1_3},
+            {R.drawable.food2_1, R.drawable.food2_2, R.drawable.food2_3},
+            {R.drawable.food3_1, R.drawable.food3_2, R.drawable.food3_3},
+            {R.drawable.food4_1, R.drawable.food4_2, R.drawable.food4_3},
+            {R.drawable.food5_1, R.drawable.food5_2, R.drawable.food5_3},
+            {R.drawable.food6_1, R.drawable.food6_2, R.drawable.food6_3}};
+
     public MenuAdapter(Context context, OnSelectListener onSelectListener) {
         this.mContext = context;
         this.onSelectListener=onSelectListener;
@@ -63,8 +72,7 @@ public class MenuAdapter extends BaseAdapter {
         //复用convertView
         if (convertView == null) {
             vh = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.menu_item,
-                    null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.menu_item, null);
             vh.tv_food_name = (TextView) convertView.findViewById(R.id.tv_food_name);
             vh.tv_taste = (TextView) convertView.findViewById(R.id.tv_taste);
             vh.tv_sale_num = (TextView) convertView.findViewById(R.id.tv_sale_num);
@@ -81,8 +89,8 @@ public class MenuAdapter extends BaseAdapter {
             vh.tv_food_name.setText(bean.getFoodName());
             vh.tv_taste.setText(bean.getTaste());
             vh.tv_sale_num.setText("月售" + bean.getSaleNum());
-            vh.tv_price.setText("￥"+bean.getPrice());
 
+            vh.iv_food_pic.setBackgroundResource(bgs[shopId - 1][bean.getFoodId() - 1]);
         }
         //每个Item的点击事件
         convertView.setOnClickListener(new View.OnClickListener() {
@@ -93,8 +101,8 @@ public class MenuAdapter extends BaseAdapter {
                 Intent intent = new Intent(mContext, FoodActivity.class);
                 //把菜品的详细信息传递到菜品详情界面
                 intent.putExtra("food", bean);
+                intent.putExtra("shopId", shopId);
                 mContext.startActivity(intent);
-
             }
         });
         vh.btn_add_car.setOnClickListener(new View.OnClickListener() {
@@ -112,5 +120,9 @@ public class MenuAdapter extends BaseAdapter {
     }
     public interface OnSelectListener {
         void onSelectAddCar (int position); //处理加入购物车按钮的方法
+    }
+
+    public void setShopId(int shopId) {
+        this.shopId = shopId;
     }
 }

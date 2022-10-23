@@ -3,9 +3,11 @@ package com.example.foodorderingandroid.activity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,10 +21,12 @@ import java.util.List;
 
 public class OrderActivity extends AppCompatActivity {
     private ListView lv_order;
+    private int shopId;
     private OrderAdapter adapter;
     private List<FoodBean> carFoodList;
     private TextView tv_title, tv_back,tv_distribution_cost,tv_total_cost,
             tv_cost,tv_payment;
+    private EditText address;
     private RelativeLayout rl_title_bar;
     private BigDecimal money,distributionCost;
     @Override
@@ -36,6 +40,7 @@ public class OrderActivity extends AppCompatActivity {
         money=new BigDecimal(getIntent().getStringExtra("totalMoney"));
         //获取店铺的配送费
         distributionCost=new BigDecimal(getIntent().getStringExtra("distributionCost"));
+        shopId = getIntent().getIntExtra("shopId", 0);
         initView();
         setData();
     }
@@ -54,6 +59,7 @@ public class OrderActivity extends AppCompatActivity {
         tv_total_cost = (TextView) findViewById(R.id.tv_total_cost);
         tv_cost = (TextView) findViewById(R.id.tv_cost);
         tv_payment = (TextView) findViewById(R.id.tv_payment);
+        address = findViewById(R.id.address);
         // 返回键的点击事件
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,9 +70,14 @@ public class OrderActivity extends AppCompatActivity {
         tv_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //“去支付”按钮的点击事件
-                Dialog dialog = new Dialog(OrderActivity.this, R.style.Dialog_Style);
-                dialog.setContentView(R.layout.qr_code);
-                dialog.show();
+                if (address.getText().length() != 0) {
+                    Dialog dialog = new Dialog(OrderActivity.this, R.style.Dialog_Style);
+                    dialog.setContentView(R.layout.qr_code);
+                    dialog.show();
+                } else {
+                    Toast.makeText(OrderActivity.this, "请输入地址", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
@@ -76,6 +87,7 @@ public class OrderActivity extends AppCompatActivity {
     private void setData() {
         System.out.println("setData");
         adapter=new OrderAdapter(this);
+        adapter.setShopId(shopId);
         lv_order.setAdapter(adapter);
         adapter.setData(carFoodList);
         tv_cost.setText("￥" + money);

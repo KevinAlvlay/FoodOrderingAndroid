@@ -17,7 +17,14 @@ import java.util.List;
 
 public class OrderAdapter extends BaseAdapter {
     private Context mContext;
+    private int shopId;
     private List<FoodBean> fbl;
+    private int[][] bgs = {{R.drawable.food1_1, R.drawable.food1_2,R.drawable.food1_3},
+            {R.drawable.food2_1, R.drawable.food2_2, R.drawable.food2_3},
+            {R.drawable.food3_1, R.drawable.food3_2, R.drawable.food3_3},
+            {R.drawable.food4_1, R.drawable.food4_2, R.drawable.food4_3},
+            {R.drawable.food5_1, R.drawable.food5_2, R.drawable.food5_3},
+            {R.drawable.food6_1, R.drawable.food6_2, R.drawable.food6_3}};
     public OrderAdapter(Context context) {
         this.mContext = context;
     }
@@ -75,11 +82,16 @@ public class OrderAdapter extends BaseAdapter {
             vh.tv_food_name.setText(bean.getFoodName());
             vh.tv_count.setText("x"+bean.getCount());
             vh.tv_money.setText("￥"+bean.getPrice().multiply(BigDecimal.valueOf(bean.getCount())));
+            vh.iv_food_pic.setBackgroundResource(bgs[shopId - 1][bean.getFoodId() - 1]);
         }
         return convertView;
     }
     class ViewHolder {
         public TextView tv_food_name, tv_count, tv_money;
         public ImageView iv_food_pic;
+    }
+
+    public void setShopId(int shopId) {
+        this.shopId = shopId;
     }
 }

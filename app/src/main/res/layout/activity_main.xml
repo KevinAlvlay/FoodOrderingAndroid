@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--string内容定义在main/res/values/strings-->
-    <!--亲爱的顾客您好-->
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="#FFD700"
-            android:text="@string/start_1"
-            android:layout_gravity="center_horizontal"/>
-
-    <!--欢迎进入点单系统-->
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="#FF6347"
-            android:text="@string/start_2"
-            android:layout_gravity="center_horizontal"/>
-
-    <!--点击此处开始点单-->
-    <Button
-            android:id="@+id/Button_start"
-            android:text="@string/start_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    <!--APP开发者，现在已经更改到menu中显示-->
-    <!--TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start_4"
-            android:layout_gravity="center_horizontal"/-->
-
-    <!--图片测试-->
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/image_view1"
-        android:src="@drawable/light"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
 
-    <!--进度条-->
-    <!--ProgressBar
-        android:layout_width="match_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progress_bar1"/-->
+<!--    <TextView-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:text="@string/start_1"-->
+<!--        android:textColor="#FFD700"-->
 
-</LinearLayout>
+<!--        android:textSize="30sp" />-->
+
+        <!--欢迎进入点单系统-->
+<!--    <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textColor="#FF6347"-->
+<!--            android:text="欢迎来到点餐系统"-->
+<!--            android:layout_centerInParent="true"-->
+
+<!--        />-->
+
+<!--        &lt;!&ndash;点击此处开始点单&ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/Button_start"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/start_3"-->
+
+<!--        />-->
+</RelativeLayout>
